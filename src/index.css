@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-arabic: 'Amiri', 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+.font-arabic {
+  font-family: 'Amiri', 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+}
+
+/* Print specific styles */
+@media print {
+  @page {
+    size: A5 portrait;
+    margin: 0mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print,
+  nav,
+  aside,
+  header.app-header,
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .print-page {
+    page-break-after: always;
+    break-after: page;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+  }
+
+  .print-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .print-page-a5 {
+    width: 148mm !important;
+    max-width: 148mm !important;
+    height: 210mm !important;
+    min-height: 210mm !important;
+    max-height: 210mm !important;
+    padding: 6mm 7mm !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .print-page-recap {
+    width: 148mm !important;
+    max-width: 148mm !important;
+    min-height: 210mm !important;
+    padding: 5.5mm 6.5mm !important;
+    box-sizing: border-box !important;
+  }
+
+  .print-page-recap-a5 {
+    width: 148mm !important;
+    max-width: 148mm !important;
+    min-height: 210mm !important;
+    box-sizing: border-box !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .print-page-recap-a5-landscape {
+    width: 210mm !important;
+    max-width: 210mm !important;
+    min-height: 148mm !important;
+    padding: 5.5mm 6.5mm !important;
+    box-sizing: border-box !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+

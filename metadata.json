@@ -1,0 +1,8 @@
+{
+  "name": "Sistem Rapor Guru & Administrasi Akademik",
+  "description": "Sistem manajemen evaluasi guru, impor data Excel, generator rapor individual berbahasa Arab, dan rekapitulasi nilai per mata pelajaran.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
